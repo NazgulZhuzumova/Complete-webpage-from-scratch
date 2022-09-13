@@ -1,0 +1,243 @@
+
+body{
+    background-image: linear-gradient(white,gray);
+}
+
+header img{
+    width: auto; /* this is the image across the viewport*/
+    min-height: auto;/*This  height will change based on the size of the viewport*/
+    max-width: 500px;
+    
+}
+
+nav {
+    /*background-color: white;
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;*/
+    border-radius: 1.0em;
+    margin-bottom: 1em;
+    font-weight: bold; 
+    text-align: center;
+    /*float: right;
+    margin-top: -5.1em;
+    width: 60%;*/
+}
+/* this elements are not applying to the web*/
+figure{
+    text-align: center;
+    background-color: white;
+}
+/* this elements are also not applying to the image*/
+figure img{
+    max-width: 800px;
+    /*max-height: 600px;*/
+    width: 100%;
+    height: auto;
+}
+
+
+nav ul{
+    padding: 10px;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+nav ul li {
+    background-color: black;
+    padding: 0.7em;
+    min-width: 12%;
+    margin: .65em;
+    list-style-type: none;
+    
+    /* 
+    border-radius: 1em;
+    display: inline-block;*/
+}
+
+nav ul li a{
+   color: white; 
+   text-decoration: none;
+}
+
+main{
+    padding: 1em;
+    background-color: white;
+    min-height: 400px;
+    border-radius: 1.0em;
+    margin-bottom: 1em;
+    text-align: center;
+    box-shadow: 0.5em 0.5em 0.5em rgb(42, 41, 41);
+}
+main .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* 3 column layout end*/
+
+/*.schedule table begin*/
+.schedule table {
+    border: 0.1em solid black;
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: white;
+}
+.schedule caption {
+    border: 0.1em solid black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.schedule th, .schedule td {
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.schedule th {
+    background-color: black;
+    color: white;
+}
+/*.schedule table end*/
+
+#enrollprice {
+    border: 0.1em solid black;
+    border-collapse: collapse;
+}
+
+#enrollprice td {
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+}
+
+main div .column {
+    float: left;
+}
+
+main div .left {
+    padding: 0.5%;
+    width: 20%;
+    float: left; 
+}
+
+/*main div .center {
+  width: 64%;
+}*/
+
+main div .right {
+    float: right;
+    padding: 0.5%;
+    width: 25%;   /*here supposed to be 25%, also need to check on responsiveness*/
+}
+
+footer{
+    background-color: white;
+    padding: 10px;
+    border-radius: 1.0em;
+    text-align: center;
+}
+/* Begin mobile screen*/
+@media screen and (max-width: 639px){
+
+    nav ul li{
+        border-radius: 1.0em;
+        box-shadow: 0.5em 0.5em 0.5em rgb(42, 41, 41);
+        margin: 10px;
+    }
+
+    .tablet{
+        display: none;
+    } 
+    .desktop{
+        display: none;
+    }   
+    footer {
+        box-shadow: 0.5em 0.5em 0.5em rgb(42, 41, 41);
+    }
+}
+/* End mobile screen*/
+
+/* Beging of tablet screen*/
+@media screen and (min-width: 640px){
+
+    nav ul li{
+        display: inline-block;/* this lists items horisontally and allows them to stretch*/
+        border-radius: 1.0em;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    nav ul li{
+        display: inline-block;/* this lists items horisontally and allows them to stretch*/
+        border-radius: 1.0em;
+        box-shadow: 0.5em 0.5em 0.5em rgb(68, 68, 68);
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        margin: 6px;
+    }
+    figure {
+        box-shadow: 0.5em 0.5em 0.5em rgb(68, 68, 68);
+        border-style: groove;
+        
+    }
+
+    main div .center {
+        width: 55%;
+        border-right: 0.3em solid black;
+    }
+
+    footer{
+        box-shadow: 0.5em 0.5em 0.5em rgb(68, 68, 68);
+    }
+}
+/* End tablet screen*/
+
+/* Begin desktop screen*/
+@media screen and (min-width: 961px){
+
+    header{
+        background-image: linear-gradient(to right,white,gray,black, black,black,black,black, black);
+        box-shadow: 0.5em 0.5em 0.5em rgb(42, 41, 41);
+        margin: 20px; /* this property is not applying to the contact page*/
+    }
+
+    header img{
+        width: auto;
+        height: 6em;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    nav {
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        /*background-color: lightseagreen;
+        border-top: solid 0.2em lightseagreen;  
+        border-bottom: solid 0.2em lightseagreen; 
+        */
+        margin-top: -5.3em;
+        float: right;
+        width: 60%; 
+    }
+    
+    nav ul li{
+        display: inline-block;/* this lists items horisontally and allows them to stretch*/
+        border-radius: 1em;
+        box-shadow: none;
+        margin: -5px;
+    }
+
+    main div .center {
+        padding: 0.5%;
+        width: 51%;
+        border-right: 0.3em solid black;
+        border-left: 0.3em solid black;
+    }
+}
+/* End desktop screen*/
